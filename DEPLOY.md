@@ -49,16 +49,7 @@ This repo includes **`.github/workflows/github-pages.yml`**.
 2. **Settings → Pages → Build and deployment → Source:** GitHub Actions.
 3. Push to `main` or `master`; the workflow runs `npm ci`, `npm run build`, and publishes **`dist`**.
 
-If the live URL is `https://<user>.github.io/<repo>/` (project site), add to `vite.config.js`:
-
-```js
-export default defineConfig({
-  base: '/YOUR_REPO_NAME/',
-  // ...
-})
-```
-
-Use `base: '/'` for a custom domain or `username.github.io` root site.
+The workflow sets **`SITE_BASE`** for the build so assets load under `https://<user>.github.io/<repo>/`. For a **custom domain** or a **`username.github.io` root repo**, run builds with `SITE_BASE=/` (or omit it; the default is `/`).
 
 ---
 
