@@ -3,6 +3,8 @@
  * Paths align with transaction payloads from SNS Core News (corenewssns).
  */
 
+import { COUNTRY_SELECT_OPTIONS } from './countries.js'
+
 export const ACTIVATION_FIELDS = {
   country: {
     label: 'Country',
@@ -46,13 +48,7 @@ export const VALIDATION_FIELDS = {
 
 /** Dropdown options (ids / codes as stored in SNS). */
 export const SELECT_OPTIONS = {
-  countries: [
-    { value: 'US', label: 'United States' },
-    { value: 'GB', label: 'United Kingdom' },
-    { value: 'DE', label: 'Germany' },
-    { value: 'FR', label: 'France' },
-    { value: 'MX', label: 'Mexico' },
-  ],
+  countries: COUNTRY_SELECT_OPTIONS,
   collectionAgents: [
     { value: '174', label: 'Agent 174 (MX174005)' },
     { value: '201', label: 'Agent 201' },
